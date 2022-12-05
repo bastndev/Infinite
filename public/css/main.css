@@ -1,0 +1,46 @@
+*{box-sizing: border-box;}
+
+body, html{
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1b1c23;
+}
+/* Design */
+.container svg{
+
+    fill: none;
+    stroke: url(#col);
+    stroke-width: 10;
+    transform: scale(2);
+    stroke-dasharray: 60 172 ;
+    stroke-linecap: round;
+    animation: inf 4s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+svg{
+    margin-top: 200px;
+    margin-left: 500px;
+}
+/* Animation */
+@keyframes inf{
+    0%{
+        stroke-dashoffset:0;
+    }100%{
+        stroke-dashoffset:232;
+    }
+}
+.container svg:nth-of-type(1)
+{
+    animation: none;
+    stroke: rgb(235, 235, 235);
+    stroke-dasharray: none;
+}
+
